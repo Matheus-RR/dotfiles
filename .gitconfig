@@ -1,0 +1,34 @@
+[user]
+    name = Matheus
+    email = matheus@users.noreply.github.com
+
+[core]
+    editor = vim
+    autocrlf = input
+    pager = delta
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    lg = log --oneline --graph --all --decorate
+    undo = reset HEAD~1 --mixed
+    wip = !git add -A && git commit -m 'wip'
+    amend = commit --amend --no-edit
+    cleanup = !git branch --merged | grep -v main | xargs -n 1 git branch -d
+
+[diff]
+    colorMoved = default
+
+[merge]
+    conflictstyle = diff3
